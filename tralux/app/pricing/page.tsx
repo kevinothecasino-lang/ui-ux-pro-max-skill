@@ -14,7 +14,7 @@ import { faqs, tiers } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent engagement tiers — Essential, Signature, and Atelier — for projects of every scale.",
+    "Transparent engagement tiers — Essential, Signature, and Monthly — for projects of every scale.",
 };
 
 export default function PricingPage() {
@@ -62,8 +62,14 @@ export default function PricingPage() {
                   <h2 className="font-serif text-2xl">{t.name}</h2>
                   <p className="mt-2 text-sm text-muted">{t.blurb}</p>
                   <div className="mt-6 flex items-baseline gap-1">
-                    <span className="font-serif text-4xl">{t.price}</span>
-                    <span className="text-sm text-muted">{t.cadence}</span>
+                    {t.contactOnly ? (
+                      <span className="text-sm text-muted">Contact us for payment options</span>
+                    ) : (
+                      <>
+                        <span className="font-serif text-4xl">{t.price}</span>
+                        <span className="text-sm text-muted">{t.cadence}</span>
+                      </>
+                    )}
                   </div>
 
                   <ul className="mt-7 flex-1 space-y-3">
@@ -80,7 +86,7 @@ export default function PricingPage() {
                     variant={t.featured ? "primary" : "ghost"}
                     className="mt-8 w-full"
                   >
-                    {t.price === "Custom" ? "Talk to us" : "Get started"}
+                    {t.contactOnly ? "Get in touch" : "Get started"}
                   </Button>
                 </div>
               </StaggerItem>

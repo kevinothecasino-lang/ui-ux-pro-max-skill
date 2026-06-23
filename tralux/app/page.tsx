@@ -10,7 +10,7 @@ import {
   PageShell,
   SectionHeading,
 } from "./_components/ui";
-import { features, stats } from "@/lib/content";
+import { features } from "@/lib/content";
 
 export default function Home() {
   return (
@@ -76,22 +76,6 @@ export default function Home() {
                   <h3 className="mt-4 font-serif text-2xl">{f.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted">{f.body}</p>
                 </GlassCard>
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </Container>
-      </section>
-
-      {/* ───────────────────────── Stats ───────────────────────── */}
-      <section className="relative border-y border-line bg-bg-base py-20">
-        <Container>
-          <Stagger className="grid grid-cols-2 gap-8 md:grid-cols-4">
-            {stats.map((s) => (
-              <StaggerItem key={s.label} className="text-center">
-                <p className="font-serif text-4xl md:text-5xl">{s.value}</p>
-                <p className="mt-2 text-xs uppercase tracking-[0.15em] text-muted">
-                  {s.label}
-                </p>
               </StaggerItem>
             ))}
           </Stagger>
