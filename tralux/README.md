@@ -21,6 +21,34 @@ npm run build    # production build (static)
 npm run start    # serve the production build
 ```
 
+## Deploy
+
+The site is fully static (every route prerenders to HTML), so it deploys anywhere.
+
+### GitHub Pages (set up, zero extra accounts)
+
+A workflow at [`.github/workflows/deploy-tralux.yml`](../.github/workflows/deploy-tralux.yml)
+builds the static export and publishes it. To turn it on:
+
+1. Repo **Settings → Pages → Source: GitHub Actions**.
+2. Push to `main` (the workflow also runs on demand via *Actions → Run workflow*).
+
+The workflow sets `NEXT_EXPORT=true` and the correct `PAGES_BASE_PATH` automatically,
+so assets resolve under the project subpath (e.g. `/ui-ux-pro-max-skill/`).
+
+To produce the static export locally:
+
+```bash
+NEXT_EXPORT=true npm run build   # outputs to tralux/out/
+```
+
+### Vercel (one-click alternative)
+
+Import the repo at [vercel.com/new](https://vercel.com/new), set **Root Directory**
+to `tralux`, and deploy. Next.js is auto-detected — no extra config, and you keep
+image optimization and server features if you add them later. Leave `NEXT_EXPORT`
+unset so Vercel runs the normal (non-export) build.
+
 ## Design system
 
 Theme: **matte black & white** — monochrome luxury. No pure `#000`; white is the
