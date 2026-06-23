@@ -6,7 +6,7 @@ export const site = {
   tagline: "Luxury, engineered.",
   description:
     "Tralux is a premium design and engineering studio crafting refined digital products for ambitious brands.",
-  email: "studio@tralux.com",
+  email: "tralux.info@gmail.com",
 } as const;
 
 export const nav = [
@@ -50,12 +50,6 @@ export const features = [
   },
 ] as const;
 
-export const stats = [
-  { value: "12+", label: "Years of craft" },
-  { value: "80", label: "Brands shaped" },
-  { value: "30", label: "Awards & features" },
-  { value: "99", label: "Lighthouse median" },
-] as const;
 
 export const services = [
   {
@@ -78,7 +72,7 @@ export const services = [
 export const tiers = [
   {
     name: "Essential",
-    price: "$6k",
+    price: "$700",
     cadence: "/ project",
     blurb: "A focused engagement for a single high-impact surface.",
     features: [
@@ -88,10 +82,11 @@ export const tiers = [
       "Front-end handoff",
     ],
     featured: false,
+    contactOnly: false,
   },
   {
     name: "Signature",
-    price: "$18k",
+    price: "$1,300",
     cadence: "/ project",
     blurb: "Our flagship engagement for a full marketing presence.",
     features: [
@@ -102,19 +97,21 @@ export const tiers = [
       "Unlimited revisions",
     ],
     featured: true,
+    contactOnly: false,
   },
   {
-    name: "Atelier",
-    price: "Custom",
-    cadence: "/ retainer",
-    blurb: "An ongoing partnership for teams shipping continuously.",
+    name: "Monthly",
+    price: "",
+    cadence: "",
+    blurb: "Flexible month-to-month retainer for ongoing design and engineering.",
     features: [
-      "Dedicated design + eng pod",
-      "Quarterly roadmap",
-      "Design system stewardship",
-      "Priority turnaround",
+      "Ongoing design support",
+      "Monthly sprint cycles",
+      "Priority response",
+      "Scales with your team",
     ],
     featured: false,
+    contactOnly: true,
   },
 ] as const;
 
