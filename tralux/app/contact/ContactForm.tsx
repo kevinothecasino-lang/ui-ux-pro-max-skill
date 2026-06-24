@@ -82,9 +82,9 @@ export function ContactForm() {
           <option value="" disabled>
             Select a range
           </option>
-          <option value="essential">Up to $10k</option>
-          <option value="signature">$10k–$25k</option>
-          <option value="atelier">$25k+</option>
+          <option value="essential">Essential — $700</option>
+          <option value="signature">Signature — $1,300</option>
+          <option value="monthly">Monthly retainer</option>
         </select>
       </div>
 
